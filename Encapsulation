@@ -1,0 +1,23 @@
+# Encapusulation:- 
+Binding of data(variables) and methods into single unit is known as Encapuslation.
+Binding means to provide security. 
+How do we provide security???
+ We provide security by using access modifiers 
+        1)public
+        2)protected (_)
+        3)private (__) 
+Data Mangling :- To access the private Properites we use the concept of data mangling.
+  # Syntax to access private Properites :-  object._className__MethodName 
+class GrandFather():
+    def __init__(self):
+        self._a=10 
+        self.__b = 20 
+    def _fun1(self):
+        print("This is our Farm")
+    def __fun2(self):
+        print("This is my Farmhouse") 
+class Father(GrandFather):
+    def fun3(self):
+        print("I have 50cr") 
+ob = Father() 
+ob._GrandFather__fun2() 
