@@ -1,0 +1,7 @@
+CLASS :- Class is a blueprint of the object 
+OBJECT :- INSTANCE OF THE CLASS .
+          INSTANCE MEANS MEMORY ALLOCATION.
+          Objects can be Specified in two ways. 
+                -----> Identifible chars(Attributes).  Color = blue 
+                -----> Behaviour(Methods).
+Example Link:- https://www.google.com/url?sa=i&url=http%3A%2F%2Fseleniumautomationhelper.blogspot.com%2F2017%2F06%2Fwhat-is-object-and-class.html&psig=AOvVaw0K5Zlkco8tD0-_hTk4htnf&ust=1753777569650000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNDsgtqQ344DFQAAAAAdAAAAABAE
