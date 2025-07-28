@@ -1,0 +1,41 @@
+Single Level:- 
+There will be single parent and child. Parent properties inherits to child.
+Ex: - Father and son 
+class Father():
+    def fun1(self):
+        print("I can do job") 
+class Son(Father):
+    def fun2(self):
+        print("I can Play") 
+ob = Son() 
+ob.fun1() 
+---------------------------------------------------
+Multi-level :- 
+EXAMPLE :- GrandFather,Father,Son 
+class GrandFather():
+    def fun3(self):
+        print("I can do farm")
+class Father(GrandFather):
+    def fun1(self):
+        print("I can do job") 
+class Son(Father):
+    def fun2(self):
+        print("I can Play") 
+ob = Son() 
+ob.fun3() 
+--------------------------------------------------------
+Multiple:-
+EXAMPLE :- MOTHER,FATHER,SON 
+class Mother():
+    def fun3(self):
+        print("I can cook")
+class Father():
+    def fun1(self):
+        print("I can do job") 
+class Son(Father,Mother):
+    def fun2(self):
+        print("I can Play") 
+ob = Son() 
+ob.fun3() 
+ob.fun1()
+ob.fun2()
