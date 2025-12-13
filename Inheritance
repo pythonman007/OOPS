@@ -39,3 +39,21 @@ ob = Son()
 ob.fun3() 
 ob.fun1()
 ob.fun2()
+--------------------------------------
+hierarchical inheritance:- 
+many childs has same parent class 
+class Father():
+    def fun1(self):
+        print("I am Father")
+class s1(Father):
+    def fun2(self):
+        print("I am s1")
+class s2(Father):
+    def fun3(self):
+        print("I am s2")
+class s3(Father):
+    def fun4(self):
+        print("I am s3")
+ob = s2()
+ob.fun3()
+ob.fun1()
