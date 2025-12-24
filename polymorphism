@@ -12,11 +12,12 @@ ob.fun1(10,20)
 ob.fun1(10) 
 ob.fun1() 
 MethodOverride:- 
-class MethodOverride():
+class Father():
     def fun1(self):
-        print("hey python!!!") 
-class Box(MethodOverride):
+        print("I can do job") 
+class Son(Father):
     def fun1(self):
-        super().fun1()  
-ob = Box() 
-ob.fun1()
+        print("I can play") 
+        super().fun1() 
+ob = Son() 
+ob.fun1() 
