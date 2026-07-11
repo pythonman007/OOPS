@@ -3,21 +3,24 @@ polymorphism is classified into two parts:
           1)Method Overloading.
           2)Method Overriding.
 Method Overloading:- 
-class MethodOverload():
-    def fun1(self,a=None,b=None,c=None):
-        print(a,b,c) 
-ob = MethodOverload()  
-ob.fun1(10,20,30)
-ob.fun1(10,20) 
-ob.fun1(10) 
-ob.fun1() 
+   Note :- In python latest function definations will get executed . And in python method overloading is not possible directly . if we want to get method overload error we need to use the concept of default parameters . 
+def fun1(a,b):
+    print(a,b) 
+
+def fun1(a = 0,b = 0,c = 0):
+    print(a,b,c) 
+    
+fun1(10,20) 
+
 MethodOverride:- 
-class Father():
-    def fun1(self):
-        print("I can do job") 
-class Son(Father):
-    def fun1(self):
-        print("I can play") 
-        super().fun1() 
-ob = Son() 
-ob.fun1() 
+class SoftwareTrainer:
+    def resignation(self):
+        print("SoftwareTrainer wanna resign") 
+
+class HardwareTrainer(SoftwareTrainer):
+    def resignation(self):
+        print("HardwareTrainer wanna resign")
+        super().resignation() # to get parent class properties 
+
+ob = HardwareTrainer() 
+ob.resignation() 
