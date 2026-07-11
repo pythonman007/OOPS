@@ -74,3 +74,28 @@ myLion.sound()
 myCat = Cat()
 myCat.sound()
 
+-----------------------------------------------------------------------------------
+Hybrid Inheritance :- 
+# multilevel 
+class Employee:
+    def work(self):
+        print("Employee works") 
+
+class Developer(Employee):
+    def code(self):
+        print("Developer writes code") 
+        
+class SeniorDeveloper(Developer): 
+    def review_code(self):
+        print("Senior Developer reviews code")  
+
+class TeamLead:
+    def manage_team(self):
+        print("Team lead manages the team")  
+        
+
+class TechLead(SeniorDeveloper,TechLead):
+    def conduct_meetings(self):
+        print("TechLead conduct meetings")
+        
+
