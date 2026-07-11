@@ -1,0 +1,27 @@
+Abstraction :- Hiding the unwanted details and showing the req details is called abstraction . 
+from abc import ABC,abstractmethod 
+
+class Animal(ABC):   #  abstract class 
+    
+    def eat(self):  # Concrete method 
+        print("This Animal will eat....") 
+    
+    @abstractmethod      
+    def sound(self):
+        pass 
+        
+class Lion(Animal):  # Concrete class 
+    def sound(self):
+        print("Lion will Roar...")  
+        
+class Dog(Animal):  # Concrete class 
+    def sound(self):
+        print("Dog will bark...") 
+
+class Cat(Animal):   # Concrete class 
+    def sound(self):
+        print("Cat will meow...") 
+        
+Lion().sound() 
+Dog().sound() 
+Cat().sound() 
