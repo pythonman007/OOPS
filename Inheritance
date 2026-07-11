@@ -1,59 +1,76 @@
 Single Level:- 
 There will be single parent and child. Parent properties inherits to child.
 Ex: - Father and son 
-class Father():
-    def fun1(self):
+class Father:
+    def job(self):
         print("I can do job") 
+
 class Son(Father):
-    def fun2(self):
-        print("I can Play") 
+    def play(self): 
+        print("I can play cricket") 
+        
 ob = Son() 
-ob.fun1() 
+ob.job()  
 ---------------------------------------------------
-Multi-level :- 
-EXAMPLE :- GrandFather,Father,Son 
-class GrandFather():
-    def fun3(self):
-        print("I can do farm")
-class Father(GrandFather):
-    def fun1(self):
-        print("I can do job") 
-class Son(Father):
-    def fun2(self):
-        print("I can Play") 
-ob = Son() 
-ob.fun3() 
---------------------------------------------------------
-Multiple:-
-EXAMPLE :- MOTHER,FATHER,SON 
-class Mother():
-    def fun3(self):
-        print("I can cook")
-class Father():
-    def fun1(self):
-        print("I can do job") 
+Multiple :- 
+EXAMPLE :- Father , Mother , Son 
+class Father:
+    def job(self):
+        print("I can do job")
+
+class Mother:
+    def cook(self):
+        print("I can cook") 
+      
 class Son(Father,Mother):
-    def fun2(self):
-        print("I can Play") 
+    def play(self):
+        print("I can play cricket") 
+
+ob = Son()
+ob.job()
+ob.cook()
+ob.play() 
+--------------------------------------------------------
+Multilevel:-
+EXAMPLE :- grandfather , father ,son 
+class GrandFather:
+    def farm(self):
+        print("I can do farm") 
+
+class Father(GrandFather): 
+    def job(self):
+        print("I can do job") 
+
+class Son(Father):
+    def play(self): 
+        print("I can play cricket") 
+        
 ob = Son() 
-ob.fun3() 
-ob.fun1()
-ob.fun2()
+ob.job()  
+ob.play()
+ob.farm() 
+
 --------------------------------------
 hierarchical inheritance:- 
-many childs has same parent class 
-class Father():
-    def fun1(self):
-        print("I am Father")
-class s1(Father):
-    def fun2(self):
-        print("I am s1")
-class s2(Father):
-    def fun3(self):
-        print("I am s2")
-class s3(Father):
-    def fun4(self):
-        print("I am s3")
-ob = s2()
-ob.fun3()
-ob.fun1()
+class Animal:
+    def eat(self):
+        print("This Animal eats food....") 
+        
+class Dog(Animal):
+    def sound(self):
+        print("Dog will bark....") 
+
+class Cat(Animal):
+    def sound(self):
+        print("Cat will meow....") 
+        
+class Lion(Animal): 
+    def sound(self):
+        print("Lion will Roar") 
+
+myLion = Lion() 
+myLion.sound() 
+
+myCat = Cat()
+myCat.sound()
+
