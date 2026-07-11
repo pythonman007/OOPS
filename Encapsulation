@@ -8,16 +8,17 @@ How do we provide security???
         3)private (__) 
 Data Mangling :- To access the private Properites we use the concept of data mangling.
   # Syntax to access private Properites :-  object._className__MethodName 
-class GrandFather():
-    def __init__(self):
-        self._a=10 
-        self.__b = 20 
-    def _fun1(self):
-        print("This is our Farm")
-    def __fun2(self):
-        print("This is my Farmhouse") 
-class Father(GrandFather):
-    def fun3(self):
-        print("I have 50cr") 
-ob = Father() 
-ob._GrandFather__fun2() 
+class Father:
+    def _land(self):  # protected 
+        print("This is our land of 10 acers") 
+    def __farmhouse(self): # private 
+        print("This is my farmhouse ") 
+
+class Son(Father):
+    def play(self):
+        print("I will play") 
+        
+mySon = Son() 
+mySon._land()  # protected :- it will access 
+mySon.__farmhouse()  # private :- it wont access   
+mySon._Father__farmhouse()  # Data mangling concept 
