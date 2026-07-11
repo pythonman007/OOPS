@@ -25,3 +25,32 @@ class Cat(Animal):   # Concrete class
 Lion().sound() 
 Dog().sound() 
 Cat().sound() 
+-------------------------------------------------------------------------------
+Note :- If there are no concrete methods in abstract class we call it as interface . In python conceptually it is interface but practically we call abstract base classes .
+from abc import ABC,abstractmethod 
+
+class Animal(ABC):   #  abstract class 
+    
+    @abstractmethod
+    def eat(self):  
+        pass 
+
+    @abstractmethod      
+    def sound(self):
+        pass 
+        
+class Lion(Animal):  # Concrete class 
+    def sound(self):
+        print("Lion will Roar...")  
+        
+class Dog(Animal):  # Concrete class 
+    def sound(self):
+        print("Dog will bark...") 
+
+class Cat(Animal):   # Concrete class 
+    def sound(self):
+        print("Cat will meow...") 
+        
+Lion().sound() 
+Dog().sound() 
+Cat().sound() 
