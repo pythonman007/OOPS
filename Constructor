@@ -1,12 +1,17 @@
 # Constructor (__init__) 
 # It is used to create Instance variables
-class Hey():
-    def __init__(self):
-        self.a=10 
-        self.b=20 
-    def fun1(self):
-        print(self.a) 
-    def fun2(self):
-        print(self.b) 
-ob = Hey() 
-ob.fun2() 
+class BankAccount:
+    bank_name = 'SBI'  # class variables 
+    
+    def __init__(self,name,amount):
+        # self.variable  --- > instance variable 
+        
+        self.name = name       # instance variable 
+        self.balance = amount  # instance variable 
+
+# objectName = className 
+tej = BankAccount('teja',50000) # object 1 
+raj = BankAccount('raja',80000) # object 2 
+print(tej.bank_name) # class variable every one can access 
+print(tej.balance) # balance is instance variable only teja can access 
+print(raj.balance) # balance is instance variable only raj can access   
